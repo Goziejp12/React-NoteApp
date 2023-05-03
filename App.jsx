@@ -47,6 +47,8 @@ export default function App() {
 
     function deleteNote(event, noteId) {
         event.stopPropagation()
+        /* Returns a new array whose none of its elements has an id that matches the noteId.
+        noteId is the id of the clicked note, i.e. when the delete button is clicked */ 
         setNotes(oldNotes => oldNotes.filter(note => note.id !== noteId))
     }
 
